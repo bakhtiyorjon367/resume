@@ -46,3 +46,27 @@ export interface EducationItem {
   subtitle: LocalizedString;
   period?: string;
 }
+
+export type PortfolioStatus = "live" | "offline";
+
+export type PortfolioSectionLayout = "single" | "pair";
+
+export interface PortfolioSection {
+  id: string;
+  title?: LocalizedString;
+  description: LocalizedString;
+  images: string[];
+  layout?: PortfolioSectionLayout;
+}
+
+export interface PortfolioProject {
+  id: string;
+  name: LocalizedString;
+  domain?: string;
+  status: PortfolioStatus;
+  description: LocalizedString;
+  techStack: string[];
+  images: string[];
+  imagesPending?: boolean;
+  sections?: PortfolioSection[];
+}

@@ -2,9 +2,15 @@ export interface UiStrings {
   nav: {
     home: string;
     about: string;
+    portfolio: string;
     menu: string;
     close: string;
     backToResume: string;
+  };
+  portfolio: {
+    title: string;
+    offline: string;
+    screenshotsSoon: string;
   };
   theme: {
     light: string;
@@ -38,9 +44,15 @@ export const en: UiStrings = {
   nav: {
     home: "Resume",
     about: "About",
+    portfolio: "Portfolio",
     menu: "Menu",
     close: "Close",
     backToResume: "Back to resume",
+  },
+  portfolio: {
+    title: "Portfolio",
+    offline: "Offline",
+    screenshotsSoon: "Screenshots coming soon",
   },
   theme: {
     light: "Light",

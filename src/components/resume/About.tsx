@@ -17,12 +17,12 @@ export function About() {
             <img
               src={profile.photoUrl}
               alt={profile.name}
-              className="h-40 w-40 rounded-2xl border border-[var(--border)] bg-[var(--surface)] object-cover"
+              className="aspect-[3/4] w-36 rounded-2xl border border-[var(--border)] bg-[var(--surface)] object-cover"
               onError={() => setPhotoOk(false)}
             />
           ) : (
             <div
-              className="flex h-40 w-40 items-center justify-center rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface)] text-4xl font-bold text-[var(--primary)]"
+              className="flex aspect-[3/4] w-36 items-center justify-center rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface)] text-4xl font-bold text-[var(--primary)]"
               aria-hidden
             >
               {profile.name.charAt(0)}

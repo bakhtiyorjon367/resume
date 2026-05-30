@@ -69,6 +69,17 @@ export function SiteMenu() {
                 {t.nav.home}
               </Link>
               <Link
+                to="/portfolio"
+                onClick={close}
+                className={`mt-1 block rounded-lg px-3 py-2 text-sm font-medium transition ${
+                  location.pathname === "/portfolio"
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--text)] hover:bg-[var(--bg)]"
+                }`}
+              >
+                {t.nav.portfolio}
+              </Link>
+              <Link
                 to="/about"
                 onClick={close}
                 className={`mt-1 block rounded-lg px-3 py-2 text-sm font-medium transition ${

@@ -15,7 +15,7 @@ export const profile: Profile = {
     en: "Backend-focused engineer with full-stack delivery experience across Node.js, NestJS, and React. Experienced in cost optimization, RAG systems, and rapid product builds for Korean and international teams.",
     ko: "Node.js, NestJS, React 기반의 백엔드 중심 풀스택 엔지니어입니다. 인프라 비용 최적화, RAG 검색, 빠른 프로토타이핑 경험이 있으며 한국 및 해외 팀과 협업해 왔습니다.",
   },
-  photoUrl: "/images/profile.jpg",
+  photoUrl: "/images/profileImage.JPG",
   email: "hello@mamajonov.uz",
   github: "https://github.com/bakhtiyor",
   linkedin: "https://linkedin.com/in/bakhtiyor",
