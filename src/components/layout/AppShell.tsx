@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { profile } from "../../data/profile";
 import { LangToggle } from "./LangToggle";
-import { ProjectMenu } from "./ProjectMenu";
+import { SiteMenu } from "./SiteMenu";
 import { ThemeToggle } from "./ThemeToggle";
 import { Footer } from "./Footer";
 import { motionTransition, pageTransition } from "../../utils/motion";
@@ -23,7 +23,7 @@ export function AppShell() {
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <LangToggle />
             <ThemeToggle />
-            <ProjectMenu />
+            <SiteMenu />
           </div>
         </div>
       </header>

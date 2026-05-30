@@ -15,12 +15,12 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "database",
     title: { en: "Database", ko: "데이터베이스" },
-    skills: ["MongoDB", "Redis", "GraphQL", "Firebase", "PostgreSQL"],
+    skills: ["MongoDB", "Redis", "PostgreSQL", "GraphQL"],
   },
   {
     id: "frontend",
     title: { en: "Frontend", ko: "프론트엔드" },
-    skills: ["React", "Next.js", "Redux", "WebSocket", "Ionic"],
+    skills: ["React", "Next.js", "Redux", "WebSocket"],
   },
   {
     id: "infra",
@@ -30,8 +30,9 @@ export const skillGroups: SkillGroup[] = [
       "NGINX",
       "Prometheus",
       "AWS",
-      "FastAPI",
-      "pgvector",
+      "RAG",
+      "Knowledge Graph",
+      "Cursor AI",
     ],
   },
 ];

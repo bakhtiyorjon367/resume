@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { profile } from "../../data/profile";
 import { useLanguage, useLocalized } from "../../hooks/useLanguage";
 import { Section } from "./Section";
@@ -32,7 +33,7 @@ export function About() {
           <p className="mb-6 text-base leading-relaxed text-[var(--muted)] sm:text-lg">
             {bio}
           </p>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {profile.stats.map((stat) => (
               <div
                 key={stat.value}
@@ -47,6 +48,12 @@ export function About() {
               </div>
             ))}
           </div>
+          <Link
+            to="/about"
+            className="text-sm font-medium text-[var(--primary)] hover:underline"
+          >
+            {t.about.readMore} →
+          </Link>
         </div>
       </div>
     </Section>

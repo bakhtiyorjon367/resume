@@ -39,13 +39,6 @@ export function Hero() {
         >
           {t.hero.downloadCv}
         </a>
-        <a
-          href={pdfUrls.portfolio}
-          download
-          className="rounded-xl border border-[var(--border)] px-5 py-2.5 text-sm font-semibold transition hover:border-[var(--accent)]"
-        >
-          {t.hero.portfolio}
-        </a>
       </div>
     </motion.header>
   );

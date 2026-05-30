@@ -1,9 +1,10 @@
 export interface UiStrings {
   nav: {
     home: string;
-    projects: string;
+    about: string;
     menu: string;
     close: string;
+    backToResume: string;
   };
   theme: {
     light: string;
@@ -19,39 +20,27 @@ export interface UiStrings {
     experience: string;
     education: string;
   };
+  about: {
+    readMore: string;
+  };
   hero: {
     contact: string;
     downloadCv: string;
-    portfolio: string;
   };
   footer: {
     rights: string;
     downloadKo: string;
     downloadEn: string;
   };
-  project: {
-    back: string;
-    techStack: string;
-    gallery: string;
-    notFound: string;
-    live: string;
-    offline: string;
-    archive: string;
-    viewLive: string;
-    viewGithub: string;
-  };
-  categories: Record<
-    "live-mobile" | "offline-desktop" | "earlier-career",
-    string
-  >;
 }
 
 export const en: UiStrings = {
   nav: {
     home: "Resume",
-    projects: "Projects",
+    about: "About",
     menu: "Menu",
     close: "Close",
+    backToResume: "Back to resume",
   },
   theme: {
     light: "Light",
@@ -67,30 +56,16 @@ export const en: UiStrings = {
     experience: "Experience",
     education: "Education",
   },
+  about: {
+    readMore: "Read full introduction",
+  },
   hero: {
     contact: "Contact",
     downloadCv: "Download CV",
-    portfolio: "Portfolio PDF",
   },
   footer: {
     rights: "All rights reserved.",
     downloadKo: "CV (Korean)",
     downloadEn: "CV (English)",
-  },
-  project: {
-    back: "Back to resume",
-    techStack: "Tech stack",
-    gallery: "Gallery",
-    notFound: "Project not found",
-    live: "Live",
-    offline: "Offline",
-    archive: "Archive",
-    viewLive: "View live",
-    viewGithub: "GitHub",
-  },
-  categories: {
-    "live-mobile": "Live mobile web",
-    "offline-desktop": "Offline desktop web",
-    "earlier-career": "Earlier career",
   },
 };

@@ -4,12 +4,11 @@ export type LocalizedString = Record<Lang, string>;
 
 export type LocalizedList = Record<Lang, string[]>;
 
-export type ProjectCategory =
-  | "live-mobile"
-  | "offline-desktop"
-  | "earlier-career";
-
-export type ProjectStatus = "live" | "offline" | "archive";
+export interface SelfIntroSection {
+  id: string;
+  title: LocalizedString;
+  body: LocalizedString;
+}
 
 export interface Profile {
   name: string;
@@ -22,6 +21,7 @@ export interface Profile {
   github: string;
   linkedin: string;
   stats: { label: LocalizedString; value: string }[];
+  selfIntroduction?: SelfIntroSection[];
 }
 
 export interface SkillGroup {
@@ -45,24 +45,4 @@ export interface EducationItem {
   title: LocalizedString;
   subtitle: LocalizedString;
   period?: string;
-}
-
-export interface ProjectLinks {
-  live?: string;
-  github?: string;
-  demo?: string;
-}
-
-export interface Project {
-  slug: string;
-  name: LocalizedString;
-  category: ProjectCategory;
-  status: ProjectStatus;
-  summary: LocalizedString;
-  description: LocalizedString;
-  bullets: LocalizedList;
-  techStack: string[];
-  links: ProjectLinks;
-  images: string[];
-  featured?: boolean;
 }

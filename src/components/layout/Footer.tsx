@@ -46,13 +46,6 @@ export function Footer() {
           >
             {t.footer.downloadEn}
           </a>
-          <a
-            href={pdfUrls.portfolio}
-            download
-            className="rounded-lg border border-[var(--border)] px-3 py-1.5 hover:border-[var(--primary)]"
-          >
-            {t.hero.portfolio}
-          </a>
         </div>
       </div>
       <p className="content-width mt-6 text-center text-xs text-[var(--muted)]">
