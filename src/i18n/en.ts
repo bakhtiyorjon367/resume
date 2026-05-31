@@ -29,14 +29,9 @@ export interface UiStrings {
   about: {
     readMore: string;
   };
-  hero: {
-    contact: string;
-    downloadCv: string;
-  };
   footer: {
     rights: string;
-    downloadKo: string;
-    downloadEn: string;
+    downloadCv: string;
   };
 }
 
@@ -71,13 +66,8 @@ export const en: UiStrings = {
   about: {
     readMore: "Read full introduction",
   },
-  hero: {
-    contact: "Contact",
-    downloadCv: "Download CV",
-  },
   footer: {
     rights: "All rights reserved.",
-    downloadKo: "CV (Korean)",
-    downloadEn: "CV (English)",
+    downloadCv: "Download CV",
   },
 };

@@ -2,7 +2,8 @@ import { pdfUrls, profile } from "../../data/profile";
 import { useLanguage } from "../../hooks/useLanguage";
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const resumePdf = lang === "en" ? pdfUrls.resumeEn : pdfUrls.resumeKo;
 
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--surface)] py-8 sm:py-10">
@@ -17,14 +18,6 @@ export function Footer() {
             GitHub
           </a>
           <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="text-[var(--primary)] hover:underline"
-          >
-            LinkedIn
-          </a>
-          <a
             href={`mailto:${profile.email}`}
             className="text-[var(--primary)] hover:underline"
           >
@@ -33,18 +26,11 @@ export function Footer() {
         </div>
         <div className="flex flex-wrap gap-3 text-sm">
           <a
-            href={pdfUrls.resumeKo}
+            href={resumePdf}
             download
             className="rounded-lg border border-[var(--border)] px-3 py-1.5 hover:border-[var(--primary)]"
           >
-            {t.footer.downloadKo}
-          </a>
-          <a
-            href={pdfUrls.resumeEn}
-            download
-            className="rounded-lg border border-[var(--border)] px-3 py-1.5 hover:border-[var(--primary)]"
-          >
-            {t.footer.downloadEn}
+            {t.footer.downloadCv}
           </a>
         </div>
       </div>

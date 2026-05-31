@@ -7,7 +7,7 @@ export const profile: Profile = {
     ko: "백엔드 / 풀스택 엔지니어",
   },
   location: {
-    en: "Seoul, Gwangjin-gu, Korea",
+    en: "Seoul, Dobong-gu, Korea",
     ko: "서울 광진구",
   },
   experienceYears: "3y 5m",
@@ -16,9 +16,8 @@ export const profile: Profile = {
     ko: "Node.js, NestJS, React 기반의 백엔드 중심 풀스택 엔지니어입니다. 인프라 비용 최적화, RAG 검색, 빠른 프로토타이핑 경험이 있으며 한국 및 해외 팀과 협업해 왔습니다.",
   },
   photoUrl: "/images/profileImage.JPG",
-  email: "hello@mamajonov.uz",
-  github: "https://github.com/bakhtiyor",
-  linkedin: "https://linkedin.com/in/bakhtiyor",
+  email: "bahtee367@gmail.com",
+  github: "https://github.com/bakhtiyorjon367",
   stats: [
     {
       label: { en: "Companies", ko: "경력 회사" },

@@ -31,13 +31,8 @@ export const ko: UiStrings = {
   about: {
     readMore: "자기소개 전문 보기",
   },
-  hero: {
-    contact: "연락하기",
-    downloadCv: "이력서 다운로드",
-  },
   footer: {
     rights: "All rights reserved.",
-    downloadKo: "이력서 (한국어)",
-    downloadEn: "이력서 (English)",
+    downloadCv: "이력서 다운로드",
   },
 };

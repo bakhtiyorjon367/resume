@@ -8,7 +8,7 @@ export const experience: ExperienceItem[] = [
       en: "Senior Researcher, Backend/Server",
       ko: "선임연구원, 백엔드/서버",
     },
-    period: "2025.04 – 2026.03 · 12mo",
+    period: "2025.04 – 2026.02 · 11mo",
     bullets: {
       en: [
         "Developed and maintained the backend of a blockchain-based EPCIS supply chain platform.",
@@ -29,7 +29,7 @@ export const experience: ExperienceItem[] = [
         "Cursor AI 활용, RAG 검색 시스템 사내 도구 개발 (1일 완성)",
       ],
     },
-    tags: ["NestJS", "Node.js", "MongoDB", "AWS", "PostgreSQL", "EPCIS", "GS1"],
+    tags: ["EJS", "MongoDB", "Firebase", "Redis", "Node.js", "AWS", "EPCIS", "GS1"],
     highlights: {
       en: [
         "70% AWS cost reduction",

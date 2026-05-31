@@ -19,7 +19,6 @@ export interface Profile {
   photoUrl: string;
   email: string;
   github: string;
-  linkedin: string;
   stats: { label: LocalizedString; value: string }[];
   selfIntroduction?: SelfIntroSection[];
 }
