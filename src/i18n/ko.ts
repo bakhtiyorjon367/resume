@@ -4,10 +4,10 @@ export const ko: UiStrings = {
   nav: {
     home: "이력서",
     about: "소개",
+    contact: "연락처",
     portfolio: "포트폴리오",
     menu: "메뉴",
     close: "닫기",
-    backToResume: "이력서로 돌아가기",
   },
   portfolio: {
     title: "포트폴리오",
@@ -31,8 +31,26 @@ export const ko: UiStrings = {
   about: {
     readMore: "자기소개 전문 보기",
   },
+  contact: {
+    title: "연락처",
+    nickname: "별명",
+    phone: "전화",
+    email: "이메일",
+    telegram: "텔레그램",
+    websites: "웹사이트",
+    github: "GitHub",
+    location: "현재 위치",
+    workExperience: "경력",
+    university: "대학교",
+    topik: "TOPIK",
+    toeic: "TOEIC",
+    inKoreaSince: "한국 거주 시작",
+    downloadCv: "이력서 다운로드",
+    downloadPortfolio: "포트폴리오 다운로드",
+  },
   footer: {
     rights: "All rights reserved.",
     downloadCv: "이력서 다운로드",
+    downloadPortfolio: "포트폴리오 다운로드",
   },
 };

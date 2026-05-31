@@ -9,7 +9,7 @@ export function Hero() {
 
   return (
     <motion.header
-      className="mb-8 flex flex-col pt-2 sm:mb-10 sm:pt-4 lg:mb-12"
+      className="mb-8 flex flex-col sm:mb-10 lg:mb-12"
       initial="hidden"
       animate="visible"
       variants={fadeUp}

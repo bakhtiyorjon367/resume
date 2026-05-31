@@ -1,9 +1,20 @@
+import { useLocation } from "react-router-dom";
 import { pdfUrls, profile } from "../../data/profile";
 import { useLanguage } from "../../hooks/useLanguage";
 
 export function Footer() {
   const { t, lang } = useLanguage();
+  const { pathname } = useLocation();
+
   const resumePdf = lang === "en" ? pdfUrls.resumeEn : pdfUrls.resumeKo;
+  const portfolioPdf =
+    lang === "en" ? pdfUrls.portfolioEn : pdfUrls.portfolioKo;
+
+  const showPortfolioDownload = pathname === "/portfolio";
+  const showCvDownload =
+    pathname !== "/portfolio" &&
+    pathname !== "/about" &&
+    pathname !== "/contact";
 
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--surface)] py-8 sm:py-10">
@@ -24,15 +35,28 @@ export function Footer() {
             {profile.email}
           </a>
         </div>
-        <div className="flex flex-wrap gap-3 text-sm">
-          <a
-            href={resumePdf}
-            download
-            className="rounded-lg border border-[var(--border)] px-3 py-1.5 hover:border-[var(--primary)]"
-          >
-            {t.footer.downloadCv}
-          </a>
-        </div>
+        {(showPortfolioDownload || showCvDownload) && (
+          <div className="flex flex-wrap gap-3 text-sm">
+            {showPortfolioDownload && (
+              <a
+                href={portfolioPdf}
+                download
+                className="rounded-lg bg-[var(--primary)] px-3 py-1.5 font-semibold text-white hover:opacity-90"
+              >
+                {t.footer.downloadPortfolio}
+              </a>
+            )}
+            {showCvDownload && (
+              <a
+                href={resumePdf}
+                download
+                className="rounded-lg bg-[var(--primary)] px-3 py-1.5 font-semibold text-white hover:opacity-90"
+              >
+                {t.footer.downloadCv}
+              </a>
+            )}
+          </div>
+        )}
       </div>
       <p className="content-width mt-6 text-center text-xs text-[var(--muted)]">
         © {new Date().getFullYear()} {profile.name}. {t.footer.rights}

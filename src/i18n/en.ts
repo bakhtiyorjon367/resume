@@ -2,10 +2,10 @@ export interface UiStrings {
   nav: {
     home: string;
     about: string;
+    contact: string;
     portfolio: string;
     menu: string;
     close: string;
-    backToResume: string;
   };
   portfolio: {
     title: string;
@@ -29,9 +29,27 @@ export interface UiStrings {
   about: {
     readMore: string;
   };
+  contact: {
+    title: string;
+    nickname: string;
+    phone: string;
+    email: string;
+    telegram: string;
+    websites: string;
+    github: string;
+    location: string;
+    workExperience: string;
+    university: string;
+    topik: string;
+    toeic: string;
+    inKoreaSince: string;
+    downloadCv: string;
+    downloadPortfolio: string;
+  };
   footer: {
     rights: string;
     downloadCv: string;
+    downloadPortfolio: string;
   };
 }
 
@@ -39,10 +57,10 @@ export const en: UiStrings = {
   nav: {
     home: "Resume",
     about: "About",
+    contact: "Contact",
     portfolio: "Portfolio",
     menu: "Menu",
     close: "Close",
-    backToResume: "Back to resume",
   },
   portfolio: {
     title: "Portfolio",
@@ -66,8 +84,26 @@ export const en: UiStrings = {
   about: {
     readMore: "Read full introduction",
   },
+  contact: {
+    title: "Contact",
+    nickname: "Nickname",
+    phone: "Phone",
+    email: "Email",
+    telegram: "Telegram",
+    websites: "Websites",
+    github: "GitHub",
+    location: "Location",
+    workExperience: "Experience",
+    university: "University",
+    topik: "TOPIK",
+    toeic: "TOEIC",
+    inKoreaSince: "In Korea since",
+    downloadCv: "Download CV",
+    downloadPortfolio: "Download Portfolio",
+  },
   footer: {
     rights: "All rights reserved.",
     downloadCv: "Download CV",
+    downloadPortfolio: "Download Portfolio",
   },
 };

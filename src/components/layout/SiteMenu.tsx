@@ -90,6 +90,17 @@ export function SiteMenu() {
               >
                 {t.nav.about}
               </Link>
+              <Link
+                to="/contact"
+                onClick={close}
+                className={`mt-1 block rounded-lg px-3 py-2 text-sm font-medium transition ${
+                  location.pathname === "/contact"
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--text)] hover:bg-[var(--bg)]"
+                }`}
+              >
+                {t.nav.contact}
+              </Link>
             </nav>
           </motion.aside>
         </>

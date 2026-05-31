@@ -7,12 +7,6 @@ export function AboutPage() {
 
   return (
     <article className="max-w-3xl">
-      <Link
-        to="/"
-        className="mb-6 inline-flex text-sm text-[var(--primary)] hover:underline"
-      >
-        ← {t.nav.backToResume}
-      </Link>
 
       <h1 className="mb-10 text-3xl font-bold md:text-4xl">
         {t.sections.about}

@@ -92,4 +92,6 @@ export const profile: Profile = {
 export const pdfUrls = {
   resumeKo: "/resume-ko.pdf",
   resumeEn: "/resume-en.pdf",
+  portfolioKo: "/portfolio-ko.pdf",
+  portfolioEn: "/portfolio-en.pdf",
 };

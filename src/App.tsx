@@ -4,6 +4,7 @@ import { LanguageProvider } from "./hooks/useLanguage";
 import { ThemeProvider } from "./hooks/useTheme";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
+import { ContactPage } from "./pages/ContactPage";
 import { PortfolioPage } from "./pages/PortfolioPage";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               <Route index element={<HomePage />} />
               <Route path="portfolio" element={<PortfolioPage />} />
               <Route path="about" element={<AboutPage />} />
+              <Route path="contact" element={<ContactPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
           </Routes>
