@@ -53,4 +53,8 @@ export const ko: UiStrings = {
     downloadCv: "이력서 다운로드",
     downloadPortfolio: "포트폴리오 다운로드",
   },
+  download: {
+    resumeNotReady: "이력서가 아직 준비되지 않았습니다.",
+    portfolioNotReady: "포트폴리오가 아직 준비되지 않았습니다.",
+  },
 };

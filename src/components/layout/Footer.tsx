@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { pdfUrls, profile } from "../../data/profile";
 import { useLanguage } from "../../hooks/useLanguage";
+import { handlePdfDownloadClick } from "../../utils/pdfDownload";
 
 export function Footer() {
   const { t, lang } = useLanguage();
@@ -42,6 +43,13 @@ export function Footer() {
                 href={portfolioPdf}
                 download
                 className="rounded-lg bg-[var(--primary)] px-3 py-1.5 font-semibold text-white hover:opacity-90"
+                onClick={(e) =>
+                  void handlePdfDownloadClick(
+                    e,
+                    portfolioPdf,
+                    t.download.portfolioNotReady,
+                  )
+                }
               >
                 {t.footer.downloadPortfolio}
               </a>
@@ -51,6 +59,13 @@ export function Footer() {
                 href={resumePdf}
                 download
                 className="rounded-lg bg-[var(--primary)] px-3 py-1.5 font-semibold text-white hover:opacity-90"
+                onClick={(e) =>
+                  void handlePdfDownloadClick(
+                    e,
+                    resumePdf,
+                    t.download.resumeNotReady,
+                  )
+                }
               >
                 {t.footer.downloadCv}
               </a>

@@ -51,6 +51,10 @@ export interface UiStrings {
     downloadCv: string;
     downloadPortfolio: string;
   };
+  download: {
+    resumeNotReady: string;
+    portfolioNotReady: string;
+  };
 }
 
 export const en: UiStrings = {
@@ -105,5 +109,9 @@ export const en: UiStrings = {
     rights: "All rights reserved.",
     downloadCv: "Download CV",
     downloadPortfolio: "Download Portfolio",
+  },
+  download: {
+    resumeNotReady: "Resume is not yet ready.",
+    portfolioNotReady: "Portfolio is not yet ready.",
   },
 };

@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from "react";
-import { Link } from "react-router-dom";
 import { contact } from "../data/contact";
 import { useLanguage, useLocalized } from "../hooks/useLanguage";
+import { handlePdfDownloadClick } from "../utils/pdfDownload";
 
 export function ContactPage() {
   const { t, lang } = useLanguage();
@@ -157,6 +157,13 @@ export function ContactPage() {
               href={resumePdf}
               download
               className="rounded-xl bg-[var(--primary)] px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90"
+              onClick={(e) =>
+                void handlePdfDownloadClick(
+                  e,
+                  resumePdf,
+                  t.download.resumeNotReady,
+                )
+              }
             >
               {t.contact.downloadCv}
             </a>
@@ -164,6 +171,13 @@ export function ContactPage() {
               href={portfolioPdf}
               download
               className="rounded-xl bg-[var(--primary)] px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90"
+              onClick={(e) =>
+                void handlePdfDownloadClick(
+                  e,
+                  portfolioPdf,
+                  t.download.portfolioNotReady,
+                )
+              }
             >
               {t.contact.downloadPortfolio}
             </a>
