@@ -6,7 +6,7 @@ export function AboutPage() {
   const { t } = useLanguage();
 
   return (
-    <article className="max-w-3xl">
+    <article>
 
       <h1 className="mb-10 text-3xl font-bold md:text-4xl">
         {t.sections.about}

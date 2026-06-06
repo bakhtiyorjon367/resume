@@ -11,7 +11,7 @@ export function AppShell() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+    <div className="flex min-h-screen flex-col bg-[var(--bg)] text-[var(--text)]">
       <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--bg)]/80 backdrop-blur">
         <div className="content-width flex items-center justify-between gap-4 py-3">
           <Link
@@ -35,7 +35,7 @@ export function AppShell() {
           animate={pageTransition.animate}
           exit={pageTransition.exit}
           transition={motionTransition(0.2)}
-          className="content-width py-6 sm:py-8 lg:py-10"
+          className="content-width flex-1 py-6 sm:py-8 lg:py-10"
         >
           <Outlet />
         </motion.main>

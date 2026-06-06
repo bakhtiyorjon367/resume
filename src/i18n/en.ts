@@ -2,6 +2,8 @@ export interface UiStrings {
   nav: {
     home: string;
     about: string;
+    languageCertificate: string;
+    graduationCertificate: string;
     contact: string;
     portfolio: string;
     menu: string;
@@ -55,12 +57,20 @@ export interface UiStrings {
     resumeNotReady: string;
     portfolioNotReady: string;
   };
+  certificates: {
+    languageTitle: string;
+    graduationTitle: string;
+    download: string;
+    notReady: string;
+  };
 }
 
 export const en: UiStrings = {
   nav: {
     home: "Resume",
     about: "About",
+    languageCertificate: "Language Certificate",
+    graduationCertificate: "Graduation Certificate",
     contact: "Contact",
     portfolio: "Portfolio",
     menu: "Menu",
@@ -113,5 +123,11 @@ export const en: UiStrings = {
   download: {
     resumeNotReady: "Resume is not yet ready.",
     portfolioNotReady: "Portfolio is not yet ready.",
+  },
+  certificates: {
+    languageTitle: "Language Certificate",
+    graduationTitle: "Graduation Certificate",
+    download: "Download",
+    notReady: "Certificate is not yet available.",
   },
 };

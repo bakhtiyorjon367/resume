@@ -4,6 +4,8 @@ export const ko: UiStrings = {
   nav: {
     home: "이력서",
     about: "소개",
+    languageCertificate: "어학 증명서",
+    graduationCertificate: "졸업 증명서",
     contact: "연락처",
     portfolio: "포트폴리오",
     menu: "메뉴",
@@ -56,5 +58,11 @@ export const ko: UiStrings = {
   download: {
     resumeNotReady: "이력서가 아직 준비되지 않았습니다.",
     portfolioNotReady: "포트폴리오가 아직 준비되지 않았습니다.",
+  },
+  certificates: {
+    languageTitle: "어학 증명서",
+    graduationTitle: "졸업 증명서",
+    download: "다운로드",
+    notReady: "증명서가 아직 준비되지 않았습니다.",
   },
 };

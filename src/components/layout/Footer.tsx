@@ -15,6 +15,8 @@ export function Footer() {
   const showCvDownload =
     pathname !== "/portfolio" &&
     pathname !== "/about" &&
+    pathname !== "/language-certificate" &&
+    pathname !== "/graduation-certificate" &&
     pathname !== "/contact";
 
   return (

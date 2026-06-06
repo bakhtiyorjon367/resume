@@ -91,6 +91,28 @@ export function SiteMenu() {
                 {t.nav.about}
               </Link>
               <Link
+                to="/language-certificate"
+                onClick={close}
+                className={`mt-1 block rounded-lg px-3 py-2 text-sm font-medium transition ${
+                  location.pathname === "/language-certificate"
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--text)] hover:bg-[var(--bg)]"
+                }`}
+              >
+                {t.nav.languageCertificate}
+              </Link>
+              <Link
+                to="/graduation-certificate"
+                onClick={close}
+                className={`mt-1 block rounded-lg px-3 py-2 text-sm font-medium transition ${
+                  location.pathname === "/graduation-certificate"
+                    ? "bg-[var(--primary)] text-white"
+                    : "text-[var(--text)] hover:bg-[var(--bg)]"
+                }`}
+              >
+                {t.nav.graduationCertificate}
+              </Link>
+              <Link
                 to="/contact"
                 onClick={close}
                 className={`mt-1 block rounded-lg px-3 py-2 text-sm font-medium transition ${

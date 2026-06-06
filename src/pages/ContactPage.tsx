@@ -111,7 +111,7 @@ export function ContactPage() {
   ];
 
   return (
-    <article className="max-w-3xl">
+    <article>
 
       <h1 className="mb-4 text-3xl font-bold md:text-4xl">{t.contact.title}</h1>
       <p className="mb-6 text-2xl font-bold text-[var(--text)]">{contact.name}</p>

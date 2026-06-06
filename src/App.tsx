@@ -5,6 +5,8 @@ import { ThemeProvider } from "./hooks/useTheme";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
+import { GraduationCertificatePage } from "./pages/GraduationCertificatePage";
+import { LanguageCertificatePage } from "./pages/LanguageCertificatePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
 
 function App() {
@@ -17,6 +19,14 @@ function App() {
               <Route index element={<HomePage />} />
               <Route path="portfolio" element={<PortfolioPage />} />
               <Route path="about" element={<AboutPage />} />
+              <Route
+                path="language-certificate"
+                element={<LanguageCertificatePage />}
+              />
+              <Route
+                path="graduation-certificate"
+                element={<GraduationCertificatePage />}
+              />
               <Route path="contact" element={<ContactPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
