@@ -13,7 +13,7 @@ jobs:
 
       - uses: actions/setup-node@v5
         with:
-          node-version: "24"
+          node-version: "20"
           cache: "npm"
 
       - run: npm ci
@@ -33,4 +33,3 @@ jobs:
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
             dist/ \
             ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/mamajonov.uz/
-

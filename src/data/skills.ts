@@ -10,12 +10,15 @@ export const skillGroups: SkillGroup[] = [
       "NestJS",
       "TypeScript",
       "Python",
+      "Rest API",
+      "GraphQL",
+      "FastAPI",
     ],
   },
   {
     id: "database",
     title: { en: "Database", ko: "데이터베이스" },
-    skills: ["MongoDB", "Redis", "PostgreSQL", "GraphQL"],
+    skills: ["MongoDB", "Redis", "PostgreSQL"],
   },
   {
     id: "frontend",
@@ -33,6 +36,7 @@ export const skillGroups: SkillGroup[] = [
       "RAG",
       "Knowledge Graph",
       "Cursor AI",
+      "Claude AI",
     ],
   },
 ];
