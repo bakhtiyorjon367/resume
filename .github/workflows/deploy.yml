@@ -1,12 +1,24 @@
-name: Deploy to EC2
+name: Deploy portfolio to Oracle server
 
 on:
   push:
     branches: [main]
+  workflow_dispatch: # also allow "Run workflow" from the Actions tab
+
+# Never let two deploys overlap
+concurrency:
+  group: deploy-portfolio
+  cancel-in-progress: false
+
+env:
+  DEPLOY_HOST: 168.110.19.228
+  DEPLOY_USER: ubuntu
+  DEPLOY_PATH: /var/www/mamajonov.uz
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v5
@@ -20,16 +32,28 @@ jobs:
 
       - run: npm run build
 
-      - name: Setup SSH key
+      # The server's host key is pinned instead of trusted on first use
+      - name: Set up SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/deploy_key
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+          echo "$DEPLOY_HOST ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAOroEqlaShLTEW5i18YwOK/KkqSbiwtKf6qTUPfDq0O" >> ~/.ssh/known_hosts
 
-      - name: Deploy to EC2 via rsync
+      # --chmod makes every file readable by nginx, whatever permissions it had locally
+      - name: Upload site
         run: |
-          rsync -avz --delete \
-            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
-            dist/ \
-            ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/mamajonov.uz/
+          rsync -az --delete --chmod=D755,F644 \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            dist/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+
+      # Fail the job unless https://mamajonov.uz is now serving exactly this build
+      - name: Check the live site
+        run: |
+          expected=$(grep -oE '/assets/[^"]+\.js' dist/index.html | head -1)
+          live=$(curl -fsS https://mamajonov.uz/ | grep -oE '/assets/[^"]+\.js' | head -1)
+          test -n "$expected" && test "$live" = "$expected"
+          curl -fsS -o /dev/null "https://mamajonov.uz$live"
+          echo "✅ https://mamajonov.uz is serving this build ($live)"
