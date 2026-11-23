@@ -11,7 +11,7 @@ export const portfolioProjects: PortfolioProject[] = [
     id: "chuncheon-cafe",
     name: { en: "ChuncheonCafe", ko: "ChuncheonCafe" },
     domain: "https://chuncheon.uz",
-    status: "live",
+    status: "offline",
     description: {
       en: "Progressive Web App with a NestJS and MongoDB backend and a React/Ionic frontend. Admins manage restaurants via CRUD; each restaurant manages products, categories, profile info, working hours, and featured items (suggested/new). Order alerts are delivered through Telegram. Users browse available restaurants, open menus by category, like and comment on dishes, and order from the cart. Per-restaurant wishlists, reviews, addresses, and account settings are supported on the user side.",
       ko: "NestJS·MongoDB 백엔드와 React/Ionic 프론트엔드로 구성된 PWA입니다. 관리자는 레스토랑을 CRUD하고, 레스토랑은 제품·카테고리·영업 정보·근무 시간·추천/신메뉴를 관리하며 텔레그램으로 주문 알림을 받습니다. 사용자는 레스토랑 목록에서 매장을 선택해 메뉴를 보고, 상세에서 좋아요·댓글을 남기며 장바구니로 주문합니다. 매장별 위시리스트, 리뷰, 주소, 계정 관리 기능을 제공합니다.",
