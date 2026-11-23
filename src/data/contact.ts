@@ -18,7 +18,6 @@ export const contact = {
     url: "https://t.me/themamajonovs",
   },
   websites: [
-    { label: "chuncheon.uz", url: "https://chuncheon.uz" },
     { label: "optomkoreya.uz", url: "https://optomkoreya.uz" },
   ],
   location: profile.location,
